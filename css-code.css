@@ -1,0 +1,170 @@
+/* World Class Elite Styles */
+:root {
+    --green: #009739;
+    --yellow: #FFD100;
+    --red: #EF3340;
+    --black: #000000;
+    --glass: rgba(255, 255, 255, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    background: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0?q=80&w=2000') no-repeat center center fixed;
+    background-size: cover;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,151,57,0.4) 100%);
+    z-index: -1;
+}
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.glow-text {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 0 0 20px var(--green);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--yellow);
+    letter-spacing: 2px;
+}
+
+/* Card Grid - Elite Layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 24px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    border-color: var(--yellow);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--yellow);
+}
+
+/* Navigation & Buttons */
+.header-nav {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.glass-btn {
+    background: var(--red);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Content View Logic */
+.content-view {
+    display: none;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%; max-width: 800px;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.95);
+    border-radius: 30px;
+    z-index: 100;
+    padding: 40px;
+    border: 2px solid var(--green);
+}
+
+.content-view.active {
+    display: block;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: var(--red);
+    border: none; color: white;
+    width: 40px; height: 40px;
+    border-radius: 50%; font-size: 1.5rem;
+}
+
+.data-scroll {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 15px;
+}
+
+/* Tables */
+.table-container { overflow-x: auto; margin-top: 20px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid var(--glass); padding: 15px; text-align: left; }
+th { background: var(--green); color: white; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .glow-text { font-size: 2rem; }
+    .card-grid { grid-template-columns: 1fr; }
+}

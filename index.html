@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>São Tomé & Príncipe | Elite Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css-code.css">
+</head>
+<body>
+
+    <div id="main-page" class="page active">
+        <div class="hero-section">
+            <h1 class="glow-text">São Tomé and Príncipe</h1>
+            <p class="hero-subtitle">Interactive Exploration & Mission Portal</p>
+        </div>
+        
+        <div class="card-grid">
+            <div class="card" onclick="showPage('intro-hub')">
+                <div class="card-icon">🏝️</div>
+                <h3>Country Intro</h3>
+                <p>Geography, People & Culture</p>
+            </div>
+            <div class="card" onclick="showPage('visiting-hub')">
+                <div class="card-icon">✈️</div>
+                <h3>Visiting & Residency</h3>
+                <p>Visas, Logistics & Pathways</p>
+            </div>
+            <div class="card" onclick="showPage('strategic-hub')">
+                <div class="card-icon">📊</div>
+                <h3>Strategic Analysis</h3>
+                <p>PESTEL & SWOT Insights</p>
+            </div>
+            <div class="card" onclick="showPage('social-hub')">
+                <div class="card-icon">🤝</div>
+                <h3>Social Landscape</h3>
+                <p>Religion, Syncretism & NGOs</p>
+            </div>
+            <div class="card" onclick="showPage('mission-hub')">
+                <div class="card-icon">🏥</div>
+                <h3>Mission & Programs</h3>
+                <p>Education, Health & Evangelism</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro-hub" class="page">
+        <div class="header-nav">
+            <button class="glass-btn" onclick="showPage('main-page')">← Main Menu</button>
+            <h2>Country Introduction</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card sub" onclick="showSub('basic-info')"><h3>Quick Facts</h3></div>
+            <div class="card sub" onclick="showSub('location-pop')"><h3>Geography & People</h3></div>
+            <div class="card sub" onclick="showSub('lang-religion')"><h3>Language & Beliefs</h3></div>
+        </div>
+
+        <div id="basic-info" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>The Beautiful Island Nation</h3>
+                <p>São Tomé and Príncipe is a beautiful island nation in Central Africa, renowned for its rich biodiversity, lush tropical landscapes, and vibrant culture.</p>
+            </div>
+        </div>
+
+        <div id="location-pop" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Location & Population</h3>
+                <ul>
+                    <li><strong>Location:</strong> Atlantic Ocean, West of Gabon.</li>
+                    <li><strong>Geography:</strong> Two main islands: São Tomé and Príncipe.</li>
+                    <li><strong>Capital:</strong> São Tomé.</li>
+                    <li><strong>Demographics:</strong> Around 235,536 people with a young population.</li>
+                    <li><strong>Needs:</strong> High demand for education, jobs, healthcare, and housing.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="lang-religion" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Communication & Faith</h3>
+                <p><strong>Official Language:</strong> Portuguese (Used in schools, government, and formal communication).</p>
+                <p><strong>Religious Landscape:</strong> Primarily Christian (Roman Catholic & Evangelical Protestant). Some local beliefs mix Christianity with African traditions.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="visiting-hub" class="page">
+        <div class="header-nav">
+            <button class="glass-btn" onclick="showPage('main-page')">← Main Menu</button>
+            <h2>Visiting & Residency</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card sub" onclick="showSub('visa-table')"><h3>Visa Requirements</h3></div>
+            <div class="card sub" onclick="showSub('residency-types')"><h3>Residency Paths</h3></div>
+            <div class="card sub" onclick="showSub('travel-info')"><h3>Travel & Logistics</h3></div>
+        </div>
+
+        <div id="visa-table" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Visa Comparison</h3>
+                <div class="table-container">
+                    <table>
+                        <tr><th>Requirement</th><th>Short-Stay (E-Visa)</th><th>Long-Stay (National)</th></tr>
+                        <tr><td>Duration</td><td>30 Days (Extendable)</td><td>90+ Days</td></tr>
+                        <tr><td>Purpose</td><td>Tourism, Transit, Business</td><td>Work, Study, Invest</td></tr>
+                        <tr><td>Cost</td><td>€20 - €30</td><td>€60 - €100</td></tr>
+                        <tr><td>Prerequisites</td><td>Passport, Bank Statement, Return Ticket, Accommodation</td><td>Contract/Admission, Criminal Record, Health Cert</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div id="residency-types" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Pathways to Stay</h3>
+                <p><strong>Temporary (1 Year):</strong> Renewable. Requires long-stay visa, financial proof, and health certificate.</p>
+                <p><strong>Permanent (Indefinite):</strong> Requires 5 years continuous legal stay and established local ties.</p>
+                <p><strong>Investment Citizenship:</strong> Min. $90,000 contribution to National Transformation Fund. Direct lifetime path.</p>
+                <p><strong>Investor Residency:</strong> Expedited path for Tourism, Agriculture, or Energy sectors.</p>
+            </div>
+        </div>
+
+        <div id="travel-info" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Flight Routes & Health</h3>
+                <ul>
+                    <li><strong>Routes:</strong> TAAG, Ethiopian, RAM, and TAP Portugal.</li>
+                    <li><strong>Cost:</strong> Avg $1,500 (~72,000 EGP) round-trip from Cairo.</li>
+                    <li><strong>Mandatory:</strong> Yellow Fever Certificate required for all entries.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="strategic-hub" class="page">
+        <div class="header-nav">
+            <button class="glass-btn" onclick="showPage('main-page')">← Main Menu</button>
+            <h2>Strategic Analysis</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card sub" onclick="showSub('pestel-data')"><h3>PESTEL Analysis</h3></div>
+            <div class="card sub" onclick="showSub('swot-data')"><h3>SWOT Analysis</h3></div>
+        </div>
+
+        <div id="pestel-data" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>PESTEL Overview</h3>
+                <p><strong>Political:</strong> Stable multi-party democracy despite frequent cabinet changes.</p>
+                <p><strong>Economical:</strong> High inflation vs. prioritizing skills transfer and self-sustainability.</p>
+                <p><strong>Social:</strong> Focus on building human capital through education and TOTs.</p>
+                <p><strong>Environmental:</strong> Challenges include climate change, land degradation, and coastal erosion.</p>
+                <p><strong>Legal:</strong> Constitutional laws promote institutional stability.</p>
+            </div>
+        </div>
+
+        <div id="swot-data" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>SWOT Summary</h3>
+                <p><strong>Strengths:</strong> Portuguese speaking servants, Resource allocation flexibility, disease familiarity.</p>
+                <p><strong>Weaknesses:</strong> Travel cost inefficiency, lack of sister church.</p>
+                <p><strong>Opportunities:</strong> Youth digital transformation, external support openness.</p>
+                <p><strong>Threats:</strong> Weak infrastructure, registration requirements, political instability.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="social-hub" class="page">
+        <div class="header-nav">
+            <button class="glass-btn" onclick="showPage('main-page')">← Main Menu</button>
+            <h2>Social & Religious</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card sub" onclick="showSub('faith-freedom')"><h3>Religious Landscape</h3></div>
+            <div class="card sub" onclick="showSub('syncretism-logic')"><h3>Syncretism Patterns</h3></div>
+            <div class="card sub" onclick="showSub('ngo-list')"><h3>Major Stakeholders</h3></div>
+        </div>
+
+        <div id="faith-freedom" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Freedom of Worship</h3>
+                <p><strong>Status:</strong> Absolute freedom of worship; secular state. No laws against evangelism.</p>
+                <p><strong>Groups:</strong> Roman Catholic, Islam (migrants), Bahà'i faith, Mana, and ATR.</p>
+            </div>
+        </div>
+
+        <div id="syncretism-logic" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Syncretism Patterns</h3>
+                <p><strong>Pattern 1:</strong> Dual Allegiance (Catholic + African Traditional Religion).</p>
+                <p><strong>Pattern 2:</strong> The Djambí Ritual (Spirit Possession).</p>
+                <p><strong>Pattern 3:</strong> Religio-Social Brotherhoods.</p>
+            </div>
+        </div>
+
+        <div id="ngo-list" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Key NGO Stakeholders</h3>
+                <ul>
+                    <li><strong>IFRC:</strong> Medical NGO since 1976 with 5 branches.</li>
+                    <li><strong>Missão Dimix:</strong> Promotes human rights for children and youth.</li>
+                    <li><strong>UNFPA:</strong> Expanded reproductive health services since 1985.</li>
+                    <li><strong>FAO:</strong> Working on food security and the blue economy since 1975.</li>
+                    <li><strong>Fundação Príncipe:</strong> Focuses on biodiversity and community development.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="mission-hub" class="page">
+        <div class="header-nav">
+            <button class="glass-btn" onclick="showPage('main-page')">← Main Menu</button>
+            <h2>Mission & Health</h2>
+        </div>
+        <div class="card-grid">
+            <div class="card sub" onclick="showSub('edu-detail')"><h3>Education Programs</h3></div>
+            <div class="card sub" onclick="showSub('med-detail')"><h3>Medical Mission</h3></div>
+            <div class="card sub" onclick="showSub('church-detail')"><h3>Evangelism Impact</h3></div>
+        </div>
+
+        <div id="edu-detail" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Education & Youth Gaps</h3>
+                <ul>
+                    <li><strong>Learning Through Play:</strong> Targets Children (6-12).</li>
+                    <li><strong>Youth Leadership Lab:</strong> Targets Youth (15-25).</li>
+                    <li><strong>Life Skills Workshops:</strong> Targets Teenagers and Women.</li>
+                    <li><strong>Mobile Backpack School:</strong> Targets remote areas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="med-detail" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Medical Challenges</h3>
+                <p><strong>Immediate Relief:</strong> Providing vaccinations and medications for Malaria, TB, and Cholera.</p>
+                <p><strong>Sustainability:</strong> Training of Trainers (ToT) on Nursing Skills and First Aid.</p>
+                <p><strong>Awareness:</strong> Super Teeth Heroes, Vaccine Defenders, and Clean Water Warriors campaigns.</p>
+            </div>
+        </div>
+
+        <div id="church-detail" class="content-view">
+            <button class="close-btn" onclick="hideSub()">×</button>
+            <div class="data-scroll">
+                <h3>Church Evangelism</h3>
+                <p>The medical mission serves as a practical expression of the Church’s ministry, building social trust through service and holistic community engagement.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="java-code.js"></script>
+</body>
+</html>
